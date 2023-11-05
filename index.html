@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="header container">
+                <img src="img/logo.png" class="logo">
+                <i class="bx bx-menu toggleAside"></i>
+            </div>
+        </header>
+        <aside class="sideMenu">
+            <div class="aside__header">
+                <i class="bx bx-x toggleAside"></i>
+                <p class="title">History</p>
+                <i class="bx bx-trash clearHistory"></i>
+            </div>
+            <div class="history">
+                <div class="history-item">
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div class="main container">
+                <div class="content">
+                    <div class="about">
+                        <h1 class="title">Password Generator</h1>
+                        <p>Online security is key, so I made this tool to help you generate the most secured and safest passwords for your online accounts.</p>
+                    </div>
+                    <div class="shortcuts">
+                        <h3 class="title">Shortcuts</h3>
+                        <ul class="shortcut-list">
+                            <li>Press the spacebar to generate a new random password</li>
+                            <li>Press "D" to switch between Light and Dark Mode</li>
+                            <li>Press "H" to show your generated password history</li>
+                            <li>Press "C" to copy a generated password</li>
+                        </ul>
+                    </div>
+                    <div class="social-media">
+                        <h5 class="title small">Follow me on social media</h5>
+                        <div class="social-links">
+                            <a href="https://instagram.com/ericaimhigh_" class="social-link" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://x.com/ericaimhigh" class="social-link" target="_blank"><i class='bx bxl-twitter'></i></a>
+                            <a href="https://facebook.com/ericaimhigh" class="social-link" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="generator">
+                    <p class="strength"></p>
+                    <div class="password-wrapper">
+                        <p class="password"></p>
+                        <i class="bx bx-copy" onclick="copyPassword()"></i>
+                    </div>
+                    <div class="option-item lengthOption">
+                        <label for="passLength">Password Length:<span class="range-tooltip"></span></label><br>
+                        <input type="range" id="passLength" min="10" max="25" step="1">
+                    </div>
+                    <div class="options">
+                        <div class="option-item">
+                            <input type="checkbox" name="passInclude" checked>
+                            <label for="uppercase">ABCD ...</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" name="passInclude" checked>
+                            <label for="lowercase">abcd ...</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" name="passInclude" checked>
+                            <label for="numbers">1234 ...</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" name="passInclude" checked>
+                            <label for="symbols">@#$% ...</label>
+                        </div>
+                    </div>
+                    <button class="btn" onclick="generatePassword()">Generate Password</button>
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
