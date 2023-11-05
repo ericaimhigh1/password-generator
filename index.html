@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Password Generator</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     </head>
     <body>
         <header>
@@ -15,9 +16,9 @@
         </header>
         <aside class="sideMenu">
             <div class="aside__header">
-                <i class="bx bx-x toggleAside"></i>
-                <p class="title">History</p>
                 <i class="bx bx-trash clearHistory"></i>
+                <p class="title">History</p>
+                <i class="bx bx-x toggleAside"></i>
             </div>
             <div class="history">
                 <div class="history-item">
@@ -79,6 +80,9 @@
                     </div>
                     <button class="btn" onclick="generatePassword()">Generate Password</button>
                 </div>
+            </div>
+            <div class="copied-toast">
+
             </div>
         </main>
         <script src="script.js"></script>

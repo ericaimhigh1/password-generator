@@ -191,6 +191,7 @@ document.addEventListener("keypress", (event) => {
   console.log(event);
 });
 
+//HANDLE DARK MODE
 function handleDarkMode() {
   if (document.body.classList.contains("dark")) {
     document.body.classList.remove("dark");
