@@ -328,6 +328,7 @@ input[type="checkbox"] {
 @media (max-width: 462px) {
   .generator {
     width: 100%;
+    padding: 35px 25px;
   }
 
   .options {
