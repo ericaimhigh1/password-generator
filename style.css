@@ -19,7 +19,7 @@
   --clr-light: #ffffff;
   --clr-main: #4a2eca;
   --clr-main-hover: #3f03a0;
-  --clr-green: #019457;
+  --clr-green: #01940d;
   --clr-red: #e01a00;
 
   /* shadows */
@@ -96,6 +96,7 @@ aside {
   background: var(--clr-light);
   padding: 30px;
   transition: 0.5s;
+  z-index: 999;
 }
 
 aside.active {
@@ -169,6 +170,7 @@ aside.active {
 
 main {
   width: 100%;
+  position: relative;
 }
 
 .main {
@@ -301,6 +303,18 @@ input[type="checkbox"] {
   height: 20px;
   width: 20px;
   cursor: pointer;
+}
+
+.copied-toast {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50vw - 100px);
+  background: var(--clr-dark-gray);
+  color: var(--clr-light);
+  border-radius: 10px;
+  padding: 10px;
+  opacity: 0;
+  z-index: 5000;
 }
 
 @media (max-width: 1280px) {

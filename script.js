@@ -124,6 +124,23 @@ async function copyPassword() {
     await navigator.clipboard.writeText(passwordBox.innerText);
   }
   savePassword();
+  copyToast();
+}
+
+//SHOW "COPIED" TOAST
+function copyToast() {
+  document
+    .querySelector(".copied-toast")
+    .animate(
+      [
+        { bottom: "0px", opacity: 0 },
+        { opacity: 1 },
+        { bottom: "20px", opacity: 0 },
+      ],
+      {
+        duration: 800,
+      }
+    );
 }
 
 let passwordHistoryList = document.querySelector(".history");
@@ -140,7 +157,8 @@ function loadSavedPasswords() {
                     <p class="history-password">${password}
                     </p>
                     <i class="bx bx-copy historyCopy" onclick="
-                      navigator.clipboard.writeText('${password}')
+                      navigator.clipboard.writeText('${password}');
+                      copyToast();
                     "></i>
                 </div>`;
     historyHTMl += html;
